@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试BFC的形成与问题解决</title>
+    <style>
+        .box{
+            overflow: hidden; /*仅仅用作形成一个BFC*/
+            background: rebeccapurple;
+        }
+        .box p{
+            margin:10px 0;
+            background: salmon;
+            width: 300px;
+            height: 200px;
+        }
+        .bfc2{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>盒子1</p>
+        <p>盒子2</p>
+
+        <!--这里测试1-->
+        <p>盒子3</p>
+
+        <!--这里测试2-->
+        <!--<div class="bfc2">
+            <p>盒子3</p>
+        </div>-->
+    </div>
+</body>
+</html>
